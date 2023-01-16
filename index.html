@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escalante Tours</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <!--Menu-->
+    <section class="header">
+        <!--Nav bar con logo incluido-->
+        <nav>
+            <a href="index.html"><img src="images/logoes.png"></a>
+            <div class="nav-enlaces" id="navEnlaces">
+                <!--enlace para cerrar menu con poquito de js-->
+                <i class="fa1 fa-solid fa-xmark" onclick="ocultarMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!---Enlace de menu comprimido-->
+            <i class="fa2 fa-solid fa-bars" onclick="mostrarMenu()"></i>
+        </nav>
+
+        <div class="text-box">
+            <h1>ESCALANTE TOURS</h1>
+            <P>
+                Ofrecemos una amplia variedad de paquetes turisticos
+                a los lugares mas impresionantes de nuestro pulgarcito de América.
+                <br>Nuestros tours han sido creados para que puedas explorar y disfrutar
+                todo lo que El Salvador tiene para ofrecer.
+            </P>
+            <a href="destinos.html" class="wlcm-btn">¡Descubre Nuestros Destinos!</a>
+        </div>
+    </section>
+
+    <!--Zonas-->
+
+    <section class="zonas">
+
+        <h1>Zonas</h1>
+        <p>Contamos con viajes a las 3 zonas más importantes de nuestro país El Salvador</p>
+
+        <div class="fila">
+            <div class="zona-col">
+                <h3>Zona Occidental</h3>
+                <p>En la Zona Occidental de El Salvador se encuentra una gran planicie costera donde hay imponentes
+                    playas que son buscadas por turistas de todo el mundo para practicar surf.</p>
+            </div>
+            <div class="zona-col">
+                <h3>Zona Central</h3>
+                <p>Esta zona es considerada la de mayor importancia y a su vez es la
+                    más poblada pues en ella se encuentra la capital de El Salvador.</p>
+            </div>
+            <div class="zona-col">
+                <h3>Zona Occidental</h3>
+                <p>En la Zona Oriental existe un gran desarrollo turístico pues explota la belleza de sus playas y
+                    montañas. De igual manera, en esta zona se da una gran producción agricultora, especialmente del
+                    café</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Departamentos-->
+    <section class="depa">
+        <h1>DEPARTAMENTOS</h1>
+        <p>Ofrecemos viajes a 6 maravillosos destinos ubicados en las zonas principales de nuestro país.</p>
+
+
+        <div class="gallery-container">
+            <div class="gallery__item">
+                <img src="images/occidental.jpg" alt="" class="gallery__img">
+                <div class="layer">
+                    <h4><a href="ellago.html">SANTA ANA</a></h4>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <img src="images/central.jpg" alt="" class="gallery__img">
+                <div class="layer">
+                    <h4><a href="elcentro.html">SAN SALVADOR</a></h4>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <img src="images/oriente.jpg" alt="" class="gallery__img">
+                <div class="layer">
+                    <h4><a href="elcuco.html">SAN MIGUEL</a></h4>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <img src="images/union.jpg" alt="" class="gallery__img">
+                <div class="layer">
+                    <h4><a href="elmirador.html">LA UNION</a></h4>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <img src="images/chalate.jpg" alt="" class="gallery__img">
+                <div class="layer">
+                    <h4><a href="elpital.html">CHALATENANGO</a></h4>
+                </div>
+            </div>
+            <div class="gallery__item">
+                <img src="images/libertad.jpg" alt="" class="gallery__img">
+                <div class="layer">
+                    <h4><a href="elpuerto.html">LA LIBERTAD</a></h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Contancto-->
+
+    <section class="contact">
+        <h1>Si deseas saber más información
+            <br>sobre nuestros servicios.<br>
+            No dudes en contactarnos
+        </h1>
+        <a href="contacto.html" class="wlcm-btn">Contáctanos</a>
+    </section>
+
+
+    <!--Footer-->
+    <section class="footer">Julissa Karina Escalante Rivera - Copyright 2023©</section>
+
+
+    <!--JS para menu comprimido-->
+    <script>
+        var navEnlaces = document.getElementById("navEnlaces");
+
+        function mostrarMenu() {
+            navEnlaces.style.right = "0";
+        }
+
+        function ocultarMenu() {
+            navEnlaces.style.right = "-200px";
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playa El Cuco</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <section class="headercuco">
+        <!--Nav bar con logo incluido-->
+        <nav>
+            <a href="index.html"><img src="images/logoes.png"></a>
+            <div class="nav-enlaces" id="navEnlaces">
+                <!--enlace para cerrar menu con poquito de js-->
+                <i class="fa1 fa-solid fa-xmark" onclick="ocultarMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!---Enlace de menu comprimido-->
+            <i class="fa2 fa-solid fa-bars" onclick="mostrarMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>SAN MIGUEL</h1>
+            <br>
+            
+        </div>
+    </section>
+    
+    <section class="des_info">
+        <div class="fila">
+            <div class="colu">
+                <h1>PLAYA EL CUCO</h1>
+            <p>La playa El Cuco se encuentra ubicada en en el oriente de El Salvador, específicamente en el departamento de San Miguel y es una playa ideal para pasar un día de descanso completo, compartir en familia y desconectarse de todo bullicio de la ciudad. <br>
+                <br>Es una de las playas más visitadas en El Salvador, especialmente los que residente en el Oriente del país, quienes gustan de la tranquilidad de sus aguas, las extensas áreas de arena negra, muy factibles para practicar fútbol, vóleibol, jogging, entre otras. 
+            <br>También existe una gran variedad de marisco y comidas de todo tipo con precios muy económicos en pequeños restaurantes de la zona como también locales mas especializados.
+        </p>
+                <a href="reservas.html" class="wlcm-btn blue" >Reserva</a>
+            </div>
+
+            <div class="colu">
+                <img src="images/cuco1.jpg" >
+            </div>
+
+    </section>
+
+
+
+    <section class="mapa">
+        <h1>UBICACION</h1>
+
+        <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15539.72801576527!2d-88.10875478315474!3d13.166687195356781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ae0a7fc2b4875%3A0xb6328f091b6a1368!2sPlaya%20El%20Cuco!5e0!3m2!1ses-419!2ssv!4v1673754449074!5m2!1ses-419!2ssv" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
+       
+        
+    </section>
+
+
+
+
+
+
+    <section class="footer">Julissa Karina Escalante Rivera - Copyright 2023©</section>
+
+
+
+    <!--JS para menu comprimido-->
+    <script>
+        var navEnlaces = document.getElementById("navEnlaces");
+
+        function mostrarMenu() {
+            navEnlaces.style.right = "0";
+        }
+
+        function ocultarMenu() {
+            navEnlaces.style.right = "-200px";
+        }
+
+
+    </script>
+</body>
+
+</html>

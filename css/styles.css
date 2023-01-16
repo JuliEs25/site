@@ -1,0 +1,613 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+
+.header {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/slv.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Cambio de posicion del menu*/
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-enlaces {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-enlaces ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-enlaces a {
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/*estilo de los enlaces*/
+.nav-enlaces ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: whitesmoke;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-enlaces ul li:hover:after {
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 45px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: white;
+}
+
+/*Boton de bienvenida y acceso*/
+.wlcm-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.wlcm-btn:hover {
+    border: 1px solid #020626;
+    background: #020626;
+    transition: 1s;
+}
+
+/*Ocultar icons en full screen*/
+nav .fa1 {
+    display: none;
+}
+
+nav .fa2 {
+    display: none;
+}
+
+/*MediaQuery1*/
+
+@media (max-width: 700px) {
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .nav-enlaces ul li {
+        display: block;
+
+    }
+
+    .nav-enlaces {
+        position: absolute;
+        background: #020626;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -250px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+
+    nav .fa1 {
+        display: block;
+        color: white;
+        margin: 22px;
+        cursor: pointer;
+    }
+
+    nav .fa2 {
+        display: block;
+        color: white;
+        margin: 22px;
+        cursor: pointer;
+    }
+
+    .nav-enlaces ul {
+        padding: 30px;
+
+    }
+
+
+}
+
+/*Estilos de las zonas*/
+
+.zonas {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p {
+    color: #020626;
+    font-size: 14px;
+    font-weight: 450px;
+    line-height: 22px;
+    padding: 10px;
+}
+
+.fila {
+    margin: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.zona-col {
+    flex-basis: 31%;
+    background: rgb(143, 202, 204);
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.zona-col:hover {
+    box-shadow: 0 0 20px 0px #020626;
+}
+
+/*MQ para zonas*/
+@media(max-width: 700px) {
+    .fila {
+        flex-direction: column;
+    }
+}
+
+/*Formato de Grid*/
+.destinos {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 12px;
+    grid-auto-rows: 400px;
+    grid-gap: 10px;
+    
+}
+
+.gallery__img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5%;
+    
+}
+
+.gallery__item {
+    position: relative;
+    
+}
+
+.layer {
+    background: transparent;
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    transform: translate(-0%, -0%);
+    transition: 0.5s;
+}
+
+.layer:hover {
+    background: rgba(4, 23, 99, 0.7);
+    position: absolute;
+    
+}
+
+.layer h4{
+    width: 100%;
+    font-weight: bold;
+    font-size: large;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h4{
+    bottom: 49%;
+    opacity: 1;
+}
+
+.layer h4 a{
+text-decoration: none;
+color: white;
+}
+
+/*MediaQuery Grid*/
+@media(max-width: 700px) {
+    .gallery-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);}
+}
+
+/*Contacto-inicio*/
+
+.contact{
+    height: 100px auto;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/contact.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.contact h1{
+    color: white;
+    margin-bottom: 40px;
+    padding: 10px 0;
+}
+
+/*MediaQuery para contacto*/
+@media (max-width: 700px){
+    .contact h1{
+        font-size: 20px;
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+/*Footer*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    font-weight: 600;
+}
+
+/*Pagina Destino*/
+.destiheader {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/slv.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.depa {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+/*Pagina del lago*/
+.headerlago {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/coa.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+
+
+
+
+/*Pagina del centro*/
+.headercentro {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/ch.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Pagina de cuco*/
+.headercuco {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/cuc.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Pagina de cuco*/
+.headermirador {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/mira.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Pagina del pital*/
+.headerpital {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/pit1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Pagina del puerto*/
+.headerpuerto    {
+    height: 500px;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(../images/pue2.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*Formato para texto e imagenes de lugares*/
+.des_info{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.colu{
+    flex-basis: 48%;
+     padding: 30px 2px;
+}
+
+.colu img{
+    width: 100%;
+    
+}
+
+.colu h1 {
+    padding: 0;
+}
+
+.colu p{
+    padding: 15px 0 25px;
+}
+
+/*Boton de reserva en pagina de lugares*/
+
+.blue{
+    border: 1px solid #020626;
+    background: transparent;
+    color: #020626;
+}
+
+.blue:hover{
+    color: white;
+}
+
+/*mapa*/
+.mapa{
+    height: 100px auto;
+    width: 100%;
+    background-position: center;
+    position: relative;
+    text-align: center;
+    
+}
+
+.mapa h1{
+    font-size: 36px;
+    font-weight: 600;
+    position: center;
+}
+
+iframe:hover {
+    
+        box-shadow: 0 0 20px 0px #1a1da3;
+    
+}
+
+/*MediaQuery Mapas*/
+
+@media (max-width: 700px){
+    iframe {
+    height: 40px auto;
+    width: 80%;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    text-align: center;
+    }
+}
+
+/*Formulario - reserva*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*Imagen de fondo*/
+.section {
+    margin-top: 10px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/canva1.jpg);
+    background-size: cover;
+
+}
+
+/*efecto de fondo de formulario*/
+.format {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    
+}
+
+.form-title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: white;
+    border-bottom: solid 1px white;
+}
+
+.main-user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.input-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding-bottom: 15px;
+}
+
+.input-box label{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 10px;
+}
+
+select{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    padding: 0 10px;
+}
+
+
+
+
+form .wlcm-btn:hover {
+    border: 1px solid #850000;
+    background: #850000;
+    transition: 1s;
+}
+
+/*MediaQuery del Formulario*/
+
+@media (max-width: 700px){
+    .formulario {
+        min-width: 280px;
+    }
+
+    .input-box{
+        margin-bottom: 12px;
+        width: 100%;
+    }
+
+    .input-box:nth-child(2n){
+        justify-content: space-between;
+    }
+
+    .main-user-info {
+        max-width: 380px;
+        overflow: auto;
+    }
+}
+
+/*Formato Pagina Contact*/
+
+.con-section {
+    margin-top: 10px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: url(../images/contacto.jpg);
+    background-size: cover;
+}
+
+textarea {
+    height: 100%;
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    display: inline;
+    
+
+}

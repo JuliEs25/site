@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <section class="header">
+        <!--Nav bar con logo incluido-->
+        <nav>
+            <a href="index.html"><img src="images/logoes.png"></a>
+            <div class="nav-enlaces" id="navEnlaces">
+                <!--enlace para cerrar menu con poquito de js-->
+                <i class="fa1 fa-solid fa-xmark" onclick="ocultarMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!---Enlace de menu comprimido-->
+            <i class="fa2 fa-solid fa-bars" onclick="mostrarMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Contacto</h1>
+           
+        </div>
+    </section>
+
+    <!--Formulario-->
+    <section class="con-section">
+    <section class="format">
+    <div class="formulario">
+        <h1 class="form-title">Contáctanos</h1>
+        <form action="#">
+            <div class="main-user-info">
+                <div class="input-box">
+                    <label for="personas">Nombre Completo</label>
+                    <input type="text" name="personas" id="personas" placeholder="Nombre Completo">
+                </div>
+                <div class="input-box">
+                    <label for="numero">Telefono</label>
+                    <input type="text" name="numero" id="numero" placeholder="Ingrese su numero telefonico">
+                </div>
+                <div class="input-box">
+                    <label for="correo">Correo Electronico</label>
+                    <input type="text" name="correp" id="correo" placeholder="Ingrese su correo">
+                </div>
+               
+            </div>
+            <div class="input-box">
+                <label for="corres">Dejanos tu comentario</label>
+                <textarea id="mensaje" rows="10">
+                </textarea>
+            </div>
+            <a href="" class="wlcm-btn">Enviar</a>
+        </form>
+       
+    </div>
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--Footer-->
+    <section class="footer">Julissa Karina Escalante Rivera - Copyright 2023©</section>
+
+
+
+    <!--JS para menu comprimido-->
+    <script>
+        var navEnlaces = document.getElementById("navEnlaces");
+
+        function mostrarMenu() {
+            navEnlaces.style.right = "0";
+        }
+
+        function ocultarMenu() {
+            navEnlaces.style.right = "-200px";
+        }
+
+
+    </script>
+</body>
+
+</html>

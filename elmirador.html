@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mirador Espiritu de la Montaña</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+</head>
+
+<body>
+    <section class="headermirador">
+        <!--Nav bar con logo incluido-->
+        <nav>
+            <a href="index.html"><img src="images/logoes.png"></a>
+            <div class="nav-enlaces" id="navEnlaces">
+                <!--enlace para cerrar menu con poquito de js-->
+                <i class="fa1 fa-solid fa-xmark" onclick="ocultarMenu()"></i>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destinos.html">Destinos</a></li>
+                    <li><a href="reservas.html">Reservas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <!---Enlace de menu comprimido-->
+            <i class="fa2 fa-solid fa-bars" onclick="mostrarMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>LA UNION</h1>
+            <br>
+            
+        </div>
+    </section>
+    
+    <section class="des_info">
+        <div class="fila">
+            <div class="colu">
+                <h1>MIRADOR ESPIRITU DE LA MONTAÑA</h1>
+            <p>LEl Espiritu de la Montaña es un mirador privado el cual se encuentra en el volcán de Conchagua, la Unión. Tiene una de las mejores vistas hacia el Golfo de Fonseca. Podrás ver una gran variedad de islas de El Salvador, Honduras y Nicaragua. <br>
+                <br>En Conchagua, puedes encontrarte con los encargados del Espiritu de la Montaña. Ellos hacen 2 viajes en el día para llevarte hasta el mirador. El primer viaje es a las 8 de la mañana y el segundo es a las 3 de la tarde! Desde que te subes en el camión hasta el mirador son aproximadamente unos 45 minutos de viaje!
+        </p>
+                <a href="reservas.html" class="wlcm-btn blue" >Reserva</a>
+            </div>
+
+            <div class="colu">
+                <img src="images/mir2.jpg" >
+            </div>
+
+    </section>
+
+
+
+    <section class="mapa">
+        <h1>UBICACION</h1>
+
+        <br><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.2119299647616!2d-87.84100118586186!3d13.274692711748271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f7ab8a55948b5b1%3A0xa615b37bc6d0b7c8!2sEl%20Esp%C3%ADritu%20de%20la%20Monta%C3%B1a!5e0!3m2!1ses-419!2ssv!4v1673755215358!5m2!1ses-419!2ssv" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       
+        
+    </section>
+
+
+
+
+
+
+    <section class="footer">Julissa Karina Escalante Rivera - Copyright 2023©</section>
+
+
+
+    <!--JS para menu comprimido-->
+    <script>
+        var navEnlaces = document.getElementById("navEnlaces");
+
+        function mostrarMenu() {
+            navEnlaces.style.right = "0";
+        }
+
+        function ocultarMenu() {
+            navEnlaces.style.right = "-200px";
+        }
+
+
+    </script>
+</body>
+
+</html>
